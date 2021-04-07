@@ -9,7 +9,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshots
 
-![Design Preview](images/desktop-preview.jpg)
+![Design Preview](images/desktop-design.jpg)
 
 ![Solution Screenshot](images/DesktopScreenshot.png)
 
