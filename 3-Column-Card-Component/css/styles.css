@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f2f2f2;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  margin-top: 5rem;
+}
+
+.card {
+  min-height: 440px;
+  max-width: 325px;
+}
+.card--sedan {
+  background: #e38826;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+.card--suvs {
+  background: #006970;
+}
+.card--luxury {
+  background: #004241;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+.card__content {
+  padding: 2.8rem;
+}
+.card__icon {
+  margin-bottom: 1.5rem;
+}
+.card__title {
+  color: #f2f2f2;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+.card__copy {
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+.card__button {
+  background: #f2f2f2;
+  border: none;
+  border-radius: 5rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  padding: 0.85rem 2.15rem;
+}
+.card__button:hover, .card__button:active {
+  background: transparent;
+  border: 2px solid #f2f2f2;
+  color: #f2f2f2;
+  outline: none;
+}
+.card__button--sedan {
+  color: #e38826;
+}
+.card__button--suvs {
+  color: #006970;
+}
+.card__button--luxury {
+  color: #004241;
+}
+
+footer {
+  bottom: 0;
+  color: #004241;
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #e38826;
+}
+
+@media only screen and (min-width: 950px) {
+  body {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    min-height: 500px;
+    max-width: 305px;
+  }
+  .card--sedan {
+    border-radius: 0.75rem 0 0 0.75rem;
+  }
+  .card--luxury {
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+  .card__icon {
+    margin-bottom: 2.5rem;
+  }
+  .card__copy {
+    margin-bottom: 5.3rem;
+  }
+
+  footer {
+    bottom: 0;
+    position: absolute;
+  }
+}

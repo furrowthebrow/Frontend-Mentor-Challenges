@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$vd-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$vl-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+$font-size: 15px;
+$lexend: 'Lexend Deca', sans-serif;
+$big: 'Big Shoulders Display', cursive;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $vl-gray;
+  color: $transparent-white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font: {
+    family: $lexend;
+    weight: 400;
+  }
+  margin-top: 5rem;
+}
+
+.card {
+  min-height: 440px;
+  max-width: 325px;
+
+  &--sedan {
+    background: $bright-orange;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  &--suvs {
+    background: $dark-cyan;
+  }
+
+  &--luxury {
+    background: $vd-cyan;
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
+
+  &__content {
+    padding: 2.8rem;
+  }
+
+  &__icon {
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    color: $vl-gray;
+    font: {
+      family: $big;
+      size: 2.5rem;
+      weight: 700;
+    }
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  &__copy {
+    font: {
+      weight: 400;
+    }
+    line-height: 1.5rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &__button {
+    background: $vl-gray;
+    border: none;
+    border-radius: 5rem;
+    font: {
+      family: $lexend;
+      size: 1rem;
+      weight: 400;
+    }
+    outline: none;
+    padding: 0.85rem 2.15rem;
+    &:hover, &:active {
+      background: transparent;
+      border: 2px solid $vl-gray;
+      color: $vl-gray;
+      outline: none;
+    }
+    &--sedan {
+      color: $bright-orange;
+    }
+
+    &--suvs {
+      color: $dark-cyan;
+    }
+
+    &--luxury {
+      color: $vd-cyan;
+    }
+  }
+}
+
+footer {
+  bottom: 0;
+  color: $vd-cyan;
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+
+  & .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      & .attribution a {
+        color: $bright-orange;
+      }
+}
+
+@media only screen and (min-width: 950px) {
+  body {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    min-height: 500px;
+    max-width: 305px;
+
+    &--sedan {
+
+      border-radius: 0.75rem 0 0 0.75rem;
+    }
+
+    &--luxury {
+      border-radius: 0 0.75rem 0.75rem 0;
+    }
+    &__icon {
+      margin-bottom: 2.5rem;
+    }
+
+    &__copy {
+      margin-bottom: 5.3rem;
+    }
+  }
+
+  footer {
+    bottom: 0;
+    position: absolute;
+  }
+}
