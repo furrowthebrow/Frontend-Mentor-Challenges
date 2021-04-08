@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e5eff5;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9.75rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  width: 310px;
+}
+.card__content {
+  padding: 2rem;
+}
+.card__content h1 {
+  font-size: 1.75rem;
+}
+.card__content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.card p {
+  color: #98a6bd;
+  line-height: 1.65;
+}
+.card__join {
+  background: #fff;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.card__join h2 {
+  color: #2ab2af;
+}
+.card__join h3 {
+  color: #c0df34;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.card__subscription {
+  background: #2ab2af;
+}
+.card__subscription span {
+  color: #c1d7e6;
+}
+.card__subscription h1, .card__subscription h2, .card__subscription p {
+  color: #fff;
+}
+.card__subscription p {
+  line-height: 3.5;
+}
+.card__subscription h1 {
+  display: inline;
+}
+.card__subscription button {
+  background: #c0df34;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  width: 100%;
+}
+.card__why {
+  background: #42cdca;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.card__why h2, .card__why ul {
+  color: #fff;
+}
+.card__why ul {
+  list-style: none;
+  line-height: 1.45;
+}
+
+footer {
+  bottom: 0;
+  margin-top: 3rem;
+  position: relative;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #98a6bd;
+}
+
+@media only screen and (min-width: 700px) {
+  body, footer {
+    margin-top: 0;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "join join" "subscription why";
+    height: 475px;
+    width: 635px;
+  }
+
+  .card__join {
+    grid-area: join;
+    height: 215px;
+  }
+  .card__join h2 {
+    font-size: 1.5rem;
+  }
+
+  .card__subscription {
+    border-radius: 0 0 0 0.5rem;
+    grid-area: subscription;
+  }
+  .card__subscription button {
+    margin-top: 0.75rem;
+  }
+
+  .card__why {
+    border-radius: 0 0 0.5rem 0;
+    grid-area: why;
+  }
+
+  footer {
+    position: absolute;
+  }
+}

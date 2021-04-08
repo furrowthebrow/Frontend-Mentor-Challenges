@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+$darker-gb: darken($grayish-blue, 25%);
+$pale-teal: hsl(179, 58%, 53%);
+$white: #fff;
+
+$karla: 'Karla', sans-serif;
+$font-size: 16px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: $light-gray;
+  font: {
+    family: $karla;
+    size: $font-size;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9.75rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.card {
+  box-shadow: 0 5px 25px rgba(0,0,0, 0.1);
+  border-radius: .5rem;
+  width: 310px;
+
+  &__content {
+    padding: 2rem;
+
+    & h1 { font-size: 1.75rem; }
+    & h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+  & p {
+    color: $grayish-blue;
+    line-height: 1.65;
+  }
+  &__join {
+    background: #fff;
+    border-radius: .5rem .5rem 0 0;
+    & h2 {
+      color: $cyan;
+    }
+    & h3 {
+      color: $bright-yellow;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+     }
+  }
+
+  &__subscription {
+    background: $cyan;
+    & span { color: darken($light-gray, 10%);}
+    & h1, h2, p { color: $white; }
+    p { line-height: 3.5;}
+    & h1 { display: inline; }
+    & button {
+      background: $bright-yellow;
+      border: none;
+      border-radius: .25rem;
+      box-shadow: 0 10px 10px rgba(0,0,0, .15);
+      color: $white;
+      font: {
+        family: $karla;
+        size: 1rem;
+        weight: 700;
+      }
+      padding: 1rem;
+      width: 100%;
+    }
+  }
+
+  &__why {
+    background: $pale-teal;
+    border-radius: 0 0 .5rem .5rem;
+    & h2, ul {
+      color: $white;
+    }
+    & ul {
+      list-style: none;
+      line-height: 1.45;
+    }
+  }
+}
+
+
+
+footer {
+  bottom: 0;
+  margin-top: 3rem;
+  position: relative;
+  & .attribution { font-size: 11px; text-align: center; }
+  & .attribution a { color: $grayish-blue; }
+}
+
+
+@media only screen and (min-width: 700px) {
+
+  body, footer {
+    margin-top: 0;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "join join"
+      "subscription why";
+      height: 475px;
+      width: 635px;
+  }
+  .card__join {
+    grid-area: join;
+    height: 215px;
+    & h2 { font-size: 1.5rem; }
+  }
+  .card__subscription {
+    border-radius: 0 0 0 .5rem;
+    grid-area: subscription;
+     & button {
+       margin-top: .75rem;
+     }
+   }
+  .card__why {
+    border-radius: 0 0 .5rem 0;
+    grid-area: why;
+  }
+
+  footer {
+    position: absolute;
+  }
+
+}
