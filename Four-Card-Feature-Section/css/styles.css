@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+header > h1, p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h1, h2 {
+  color: #4c4e61;
+}
+
+span {
+  display: block;
+  font-weight: 200;
+}
+
+p {
+  color: #a3a5ae;
+}
+
+header {
+  margin-top: 3rem;
+}
+header p {
+  margin-top: 1.5rem;
+}
+
+header, .card {
+  width: 310px;
+}
+
+main {
+  margin: 3rem 1.8rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.45rem;
+  box-shadow: 0 5px 10px rgba(16, 108, 213, 0.15);
+  height: 225px;
+  margin: 1rem;
+}
+.card p {
+  font-size: 0.8rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+.card__content {
+  overflow: hidden;
+  padding: 1.8rem;
+}
+.card__supervisor {
+  border-top: 0.25rem solid #45d3d3;
+}
+.card__team {
+  border-top: 0.25rem solid #ea5353;
+}
+.card__karma {
+  border-top: 0.25rem solid #fcaf4a;
+}
+.card__calculator {
+  border-top: 0.25rem solid #549ef2;
+}
+.card__icon {
+  float: right;
+  width: 3.65rem;
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #ea5353;
+}
+
+@media only screen and (min-width: 1075px) {
+  header {
+    margin-top: 4.75rem;
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". team ." "supervisor team calculator" "supervisor karma calculator" ". karma .";
+  }
+
+  .card {
+    height: 250px;
+    width: 345px;
+  }
+  .card__icon {
+    margin-top: 1rem;
+    width: 4rem;
+  }
+
+  .card__team {
+    grid-area: team;
+  }
+
+  .card__calculator {
+    grid-area: calculator;
+  }
+
+  .card__supervisor {
+    grid-area: supervisor;
+  }
+
+  .card__karma {
+    grid-area: karma;
+  }
+}

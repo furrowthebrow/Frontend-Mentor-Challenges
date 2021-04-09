@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$vd-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$vl-gray: hsl(0, 0%, 98%);
+
+$white: #fff;
+
+
+$poppins: 'Poppins', sans-serif;
+$font-size: 15px;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $vl-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: {
+    family: $poppins;
+    size: $font-size;
+  }
+}
+
+
+header > h1, p {
+  text-align: center;
+}
+h1 { font-size: 1.5rem;}
+h1, h2 { color: $vd-blue; }
+span {
+  display: block;
+  font-weight: 200;
+}
+
+p { color: $grayish-blue; }
+
+header {
+  margin-top: 3rem;
+  & p {
+    margin-top: 1.5rem;
+  }
+}
+
+header, .card { width: 310px; }
+
+main { margin: 3rem 1.8rem; }
+
+.card {
+  background: $white;
+  border-radius: .45rem;
+  box-shadow: 0 5px 10px hsla(212, 86%, 45%, 15%);
+  height: 225px;
+  margin: 1rem;
+
+  & p {
+    font-size: .8rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+  &__content {
+    overflow: hidden;
+    padding: 1.8rem;
+  }
+
+  &__supervisor {   border-top: .25rem solid $cyan; }
+
+  &__team { border-top: .25rem solid $red; }
+
+  &__karma { border-top: .25rem solid $orange; }
+
+  &__calculator { border-top: .25rem solid $blue; }
+
+  &__icon { float: right; width: 3.65rem;}
+}
+
+
+footer {
+  bottom: 0;
+  position: relative;
+  & .attribution { font-size: 11px; text-align: center; }
+  & .attribution a { color: $red; }
+}
+
+
+@media only screen and (min-width: 1075px){
+
+  header {
+    margin-top: 4.75rem;
+    width: 500px;
+  }
+
+  h1 { font-size: 2.25rem; }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      ". team ."
+      "supervisor team calculator"
+      "supervisor karma calculator"
+      ". karma .";
+  }
+
+  .card {
+    height: 250px;
+    width: 345px;
+
+    &__icon {
+      margin-top: 1rem;
+      width: 4rem;
+    }
+  }
+
+  .card__team { grid-area: team; }
+  .card__calculator { grid-area: calculator; }
+  .card__supervisor { grid-area: supervisor; }
+  .card__karma { grid-area: karma; }
+
+}
