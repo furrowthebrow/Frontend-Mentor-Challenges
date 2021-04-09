@@ -17,7 +17,7 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 ### Links
 
 
-- [Live Site](https://price-grid-component-roan.vercel.app/)
+- [Live Site](https://frontend-mentor-challenges-ten-psi.vercel.app/Price-Grid-Component/index.html)
 
 
 ### Built with
