@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+$bubblegum: hsl(321, 75%, 66%);
+$white: #fff;
+$poppins: 'Poppins', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: {
+    color: $violet;
+    image: url("../images/bg-mobile.svg");
+    repeat: no-repeat;
+    position: top center;
+    size: contain;
+  }
+  color: $white;
+  font: {
+    family: $open-sans;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+header {
+  align-self: flex-start;
+  margin: 2.19rem;
+
+  & img {
+    width: 7.75rem;
+  }
+}
+
+main {
+  margin: 1.25rem 2.19rem;
+
+  & img {
+    width: 100%;
+  }
+
+  & h1 {
+    font: {
+      family: $poppins;
+      size: 1.45rem;
+      weight: 600;
+    }
+    padding: 3rem 0 1rem;
+    text-align: center;
+
+    & span {
+      display: block;
+    }
+  }
+
+  & p {
+    text-align: center;
+  }
+
+  & .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  & button {
+    border: none;
+    background: $white;
+    border-radius: 2.19rem;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    color: $violet;
+    font: {
+      family: $poppins;
+      size: 0.8rem;
+    }
+    margin: 1.75rem 0;
+    padding: 0.75rem 5rem;
+
+    &:hover {
+      background: $soft-magenta;
+      color: $white;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  margin-bottom: 3rem;
+
+  &__icon {
+    border: 1px solid $white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.75rem;
+    padding: 0.75rem;
+    height: 0.35rem;
+    width: 0.35rem;
+
+    &:hover {
+      border-color: $bubblegum;
+      color: $bubblegum;
+    }
+  }
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+
+  & .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  & .attribution a {
+    color: $soft-magenta;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  body {
+    background: {
+      image: url("../images/bg-desktop.svg");
+    }
+  }
+
+  header {
+    margin: 3.5rem;
+
+    & img {
+      width: 13.5rem;
+    }
+  }
+
+  main {
+    display: flex;
+    margin: 1.25rem 4.69rem;
+
+    & img {
+      min-width: 38rem;
+    }
+
+    & h1 {
+      font-size: 2rem;
+      text-align: left;
+
+      & span {
+        display: inline;
+      }
+    }
+
+    & p {
+      font-size: 1.07rem;
+      text-align: left;
+    }
+
+    & .content {
+      align-items: flex-start;
+      margin-left: 2rem;
+
+      & button {
+        font-size: 1rem;
+        padding: 1rem 4rem;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+    margin-right: 4.69rem;
+
+    & icon {
+      height: 0.5rem;
+      width: 0.5rem;
+    }
+  }
+}

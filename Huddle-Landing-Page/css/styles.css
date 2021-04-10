@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #674baf;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+header {
+  align-self: flex-start;
+  margin: 2.19rem;
+}
+header img {
+  width: 7.75rem;
+}
+
+main {
+  margin: 1.25rem 2.19rem;
+}
+main img {
+  width: 100%;
+}
+main h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  padding: 3rem 0 1rem;
+  text-align: center;
+}
+main h1 span {
+  display: block;
+}
+main p {
+  text-align: center;
+}
+main .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main button {
+  border: none;
+  background: #fff;
+  border-radius: 2.19rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  color: #674baf;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  margin: 1.75rem 0;
+  padding: 0.75rem 5rem;
+}
+main button:hover {
+  background: #e882e8;
+  color: #fff;
+}
+
+.social {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.social__icon {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  height: 0.35rem;
+  width: 0.35rem;
+}
+.social__icon:hover {
+  border-color: #e967bc;
+  color: #e967bc;
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #e882e8;
+}
+
+@media only screen and (min-width: 1100px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+  }
+
+  header {
+    margin: 3.5rem;
+  }
+  header img {
+    width: 13.5rem;
+  }
+
+  main {
+    display: flex;
+    margin: 1.25rem 4.69rem;
+  }
+  main img {
+    min-width: 38rem;
+  }
+  main h1 {
+    font-size: 2rem;
+    text-align: left;
+  }
+  main h1 span {
+    display: inline;
+  }
+  main p {
+    font-size: 1.07rem;
+    text-align: left;
+  }
+  main .content {
+    align-items: flex-start;
+    margin-left: 2rem;
+  }
+  main .content button {
+    font-size: 1rem;
+    padding: 1rem 4rem;
+  }
+
+  .social {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+    margin-right: 4.69rem;
+  }
+  .social icon {
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+}
