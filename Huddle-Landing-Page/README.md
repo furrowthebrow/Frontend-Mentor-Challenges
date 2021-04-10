@@ -17,7 +17,7 @@ This is a solution to the [Huddle landing page with single introductory section 
 ### Links
 
 
-- [Live Site](#)
+- [Live Site](https://frontend-mentor-challenges-9qmlgnapu-chndlr1.vercel.app/Huddle-Landing-Page/index.html)
 
 
 ### Built with
