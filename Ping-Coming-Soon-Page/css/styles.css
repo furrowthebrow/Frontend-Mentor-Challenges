@@ -176,5 +176,7 @@ footer {
 
   #emptyError, #invalidError {
     font-size: 0.75rem;
+    margin-left: 2.5rem;
+    text-align: left;
   }
 }
