@@ -90,6 +90,7 @@ button {
 #emptyError, #invalidError {
   color: $light-red;
   display: none;
+  font-style: italic;
   margin-bottom: 2rem;
   order: -1;
   text-align: center;

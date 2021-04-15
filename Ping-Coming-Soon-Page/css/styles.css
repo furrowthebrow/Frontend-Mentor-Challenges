@@ -76,6 +76,7 @@ button {
 #emptyError, #invalidError {
   color: #ff5263;
   display: none;
+  font-style: italic;
   margin-bottom: 2rem;
   order: -1;
   text-align: center;
