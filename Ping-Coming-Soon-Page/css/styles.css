@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.75rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo {
+  width: 3.45rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 320px;
+}
+
+h1 {
+  color: #969696;
+  font-size: 1.35rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 2.25rem 0 1rem;
+}
+h1 span {
+  color: #151f29;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem 0;
+  width: 90%;
+}
+
+button,
+input[type=email] {
+  border-radius: 1.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.45px;
+  outline: none;
+  padding: 0.75rem 1rem;
+}
+
+input[type=email] {
+  border: 0.09rem solid #c2d3ff;
+  margin: 0.75rem 0;
+}
+
+::placeholder {
+  color: #c2d3ff;
+}
+
+button {
+  background: #4f7df3;
+  border: 0;
+  box-shadow: 0px 7px 10px rgba(79, 125, 243, 0.3);
+  color: #fff;
+  font-weight: 600;
+}
+
+#emptyError, #invalidError {
+  color: #ff5263;
+  display: none;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.illustration {
+  height: auto;
+  margin: 3rem 0 7rem;
+  width: 100%;
+}
+
+footer {
+  color: #969696;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social__icon {
+  border: 1px solid #c2d3ff;
+  border-radius: 100%;
+  color: #4f7df3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  height: 0.35rem;
+  width: 0.35rem;
+}
+.social__icon:hover {
+  background: #4f7df3;
+  color: #fff;
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.footer-attribution {
+  display: flex;
+  justify-content: center;
+}
+.footer-attribution .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.footer-attribution .attribution a {
+  color: #4f7df3;
+}
+
+@media only screen and (min-width: 675px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    width: 5.3rem;
+  }
+
+  main {
+    width: 640px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  form {
+    display: inline;
+    text-align: center;
+    width: 100%;
+  }
+
+  button, input[type=email] {
+    font-size: 1rem;
+  }
+
+  input[type=email] {
+    margin-right: 0.5rem;
+    padding: 1.15rem;
+    width: 60%;
+  }
+
+  button {
+    border-radius: 3rem;
+    padding: 1.25rem 3.5rem;
+  }
+
+  .social__icon {
+    font-size: 1rem;
+  }
+
+  .copy {
+    font-size: 0.85rem;
+  }
+
+  #emptyError, #invalidError {
+    font-size: 0.75rem;
+  }
+}
