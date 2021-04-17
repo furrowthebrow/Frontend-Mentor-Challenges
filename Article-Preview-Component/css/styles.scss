@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+$vd-grayish-blue: hsl(217, 19%, 35%);
+$desaturated-d-blue: hsl(214, 17%, 51%);
+$grayish-blue: hsl(212, 23%, 69%);
+$l-grayish-blue: hsl(210, 46%, 95%);
+$white: #fff;
+$manrope: 'Manrope', sans-serif;
+$font-size: 13px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $l-grayish-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font: {
+    family: $manrope;
+    size: $font-size;
+  }
+  height: 100vh;
+}
+
+.card {
+  background: $white;
+  border-radius: 0.75rem;
+  box-shadow: 0px 10px 15px hsla(214, 17%, 51%, 0.1);
+  width: 325px;
+
+  &__header {
+    background: {
+      image: url("../images/drawers.jpg");
+      position: center -.94;
+      repeat: no-repeat;
+      size: cover;
+    }
+    border-radius: 0.75rem 0.75rem 0 0;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+  }
+
+  &__main {
+    margin: 1.88rem;
+
+    h3 {
+      color: $vd-grayish-blue;
+    }
+
+    p {
+      color: $desaturated-d-blue;
+      line-height: 1.65;
+      margin: .75rem 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.95rem;
+
+    &__content {
+      margin-left: -2.75rem;
+    }
+  }
+
+  &__author__photo {
+    background: {
+      image: url("../images/avatar-michelle.jpg");
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+    border-radius: 100%;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+
+
+  &__author__name {
+    color: $vd-grayish-blue;
+    font-weight: 700;
+  }
+
+  &__date {
+    color: $grayish-blue;
+  }
+
+  &__share {
+
+    &__btn {
+      background: $l-grayish-blue;
+      color: $desaturated-d-blue;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      height: 0.35rem;
+      width: 0.35rem;
+      z-index: 100;
+      &__contain {
+        z-index: 500;
+      }
+    }
+
+    &__info {
+      display: none;
+      background: $vd-grayish-blue;
+      border-radius: 0 0 0.75rem 0.75rem;
+      margin: -3.95rem -1.88rem -1.88rem;
+      padding: 1.88rem;
+      position: relative;
+      z-index: 50;
+
+      span {
+        color: $grayish-blue;
+        letter-spacing: 5px;
+        margin-right: 1.25rem;
+        text-transform: uppercase;
+      }
+
+      &__inner {
+        display: flex;
+      }
+    }
+
+    &__social {
+      color: $white;
+      display: flex;
+      font-size: 1.5rem;
+      margin-top: -.25rem;
+      i {
+        align-items: center;
+        margin-right: .75rem;
+      }
+    }
+  }
+}
+
+
+ .attribution {
+    bottom: 0;
+    font-size: 11px;
+    position: absolute;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+
+
+@media only screen and (min-width: 800px) {
+  body {
+
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+    width: 730px;
+
+    &__header {
+      background-position: center left;
+      border-radius: 0.75rem  0 0 0.75rem;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__main {
+      margin: 2rem;
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin-top: .75rem;
+      }
+    }
+    &__footer {
+      justify-content: flex-start;
+      margin: 0;
+      padding-top: .5rem;
+
+      &__content {
+        margin-left: 1rem;
+      }
+    }
+
+    &__author__photo {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+
+    &__share__btn {
+      &__contain {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .card__share__info {
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: .75rem;
+    display: none;
+    height: 55px;
+    left: -3px;
+    margin-left: auto;
+    margin-right: -6.5rem;
+    padding: 0;
+    top: -50px;
+    width: 245px;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 15px 0 15px;
+      border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+      left: -100px;
+      top: 30px;
+      position: relative;
+      width: 0;
+    }
+
+    &__inner {
+      display: flex;
+      margin-right: -7px;
+    }
+  }
+}
