@@ -1,0 +1,52 @@
+@use 'base';
+
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem;
+}
+
+.logo {
+  align-self: flex-start; // Keeps image from stretching
+  width: 35%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+
+    li a {
+      color: base.$primary-blue-700;
+      font: {
+        family: base.$heading-font;
+        size: 0.85rem;
+      }
+      padding: 0 0.5rem;
+
+      &:hover {
+        color: lighten(base.$accent-blue-400, 10%);
+      }
+    }
+  }
+}
+@media only screen and (min-width: 800px) {
+  header {
+    margin: 4.06rem 4.69rem;
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding-left: 3rem;
+  }
+}

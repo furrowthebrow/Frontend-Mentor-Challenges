@@ -1,0 +1,322 @@
+@use 'base';
+
+.one,
+.two {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.25rem;
+  text-align: center;
+}
+
+.one {
+  margin: 5rem 0 3.5rem;
+
+  h2 {
+    line-height: 1.5;
+    margin: 2rem 0;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  &__illustration {
+    width: 100%;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1.95rem 0 0;
+
+  input[type=email],
+  input[type=text] {
+    border: 1px solid base.$primary-blue-200;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  ::placeholder {
+    color: base.$neutral-gray-300;
+  }
+
+  button {
+    background: base.$accent-blue-400;
+    border: 0;
+    border-radius: 0.25rem;
+    color: base.$white;
+    font-size: 0.95rem;
+    padding: 0.75rem;
+
+    &:hover {
+      background: lighten(base.$accent-blue-400, 10%);
+    }
+  }
+}
+
+#invalidError,
+#invalidError2 {
+  color: base.$accent-error-red;
+  font-size: 0.75rem;
+  padding: 0.5rem 0;
+  text-align: left;
+}
+
+.wave {
+  background: {
+    image: url("../images/bg-curve-mobile.svg");
+    position: center top;
+    repeat: no-repeat;
+    size: contain;
+  }
+  display: flex;
+  height: 53px;
+}
+
+.two {
+  display: flex;
+  flex-direction: column;
+  background: {
+    color: base.$neutral-gray-blue;
+    position: center top;
+    repeat: no-repeat;
+    size: contain;
+  }
+  color: base.$primary-blue-200;
+  padding-bottom: 5.5rem;
+
+  h2 {
+    font-size: 1.1rem;
+    margin: 3rem 0 1.25rem;
+  }
+
+  p {
+    color: base.$primary-blue-200;
+    font-size: 0.85rem;
+    padding-bottom: 1.45rem;
+    text-align: left;
+  }
+
+  &__illustration {
+    width: 100%;
+  }
+}
+
+span a {
+  border-bottom: 1.5px solid base.$accent-cyan-400;
+  color: base.$accent-cyan-400;
+  font-size: 0.85rem;
+  text-decoration: none;
+
+  &:hover {
+    filter: contrast(200%);
+  }
+}
+
+span a::after {
+  content: url("../images/icon-arrow.svg");
+  font-size: 1.43rem;
+  margin: 0.35rem;
+}
+
+.card {
+  background: {
+    color: base.$white;
+    image: url("../images/icon-quotes.svg");
+    repeat: no-repeat;
+    position: top 1.5rem left 1.5rem;
+  }
+  border-radius: 0.35rem;
+  box-shadow: 0 3px 15px transparentize(base.$primary-blue-200, .9);
+  font-family: base.$body-font;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.75;
+  margin-top: 3rem;
+  padding: 3rem 1.5rem 1.5rem;
+  text-align: left;
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+
+    &__info {
+      margin-left: 0.45rem;
+    }
+  }
+
+  &__photo {
+    border-radius: 100%;
+    height: 2rem;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__position {
+    font-size: 0.6rem;
+  }
+}
+
+.cta {
+  background: base.$primary-blue-200;
+  color: base.$white;
+  padding: 5.95rem 3rem;
+  text-align: center;
+
+  p {
+    font-size: 0.85rem;
+    padding: 1rem 0;
+  }
+
+  #invalidError2 {
+    color: base.$white;
+    margin-top: -.75rem;
+    padding: 0;
+  }
+
+  button {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 974px) {
+  .wave {
+    background: {
+      image: url("../images/bg-curve-desktop.svg");
+      position: center top;
+      repeat: no-repeat;
+      size: contain;
+    }
+    height: 114px;
+    margin-bottom: -4rem;
+  }
+}
+@media only screen and (min-width: 975px) {
+  .one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 3rem;
+    grid-template-areas: "content illustration";
+
+    &__illustration {
+      grid-area: illustration;
+      margin-top: -3rem;
+    }
+
+    &__content {
+      grid-area: content;
+
+      h2 {
+        font-size: 2.5rem;
+        text-align: left;
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: left;
+      }
+
+      form {
+        flex-direction: row;
+      }
+
+      input[type=email] {
+        margin-bottom: 0;
+        margin-right: 1rem;
+        width: 75%;
+      }
+
+      button {
+        font: {
+          family: base.$heading-font;
+          size: 0.85rem;
+          weight: 700;
+        }
+        letter-spacing: 0.25px;
+        width: 45%;
+      }
+    }
+  }
+
+  .wave {
+    background: {
+      image: url("../images/bg-curve-desktop.svg");
+      position: center top;
+      repeat: no-repeat;
+      size: contain;
+    }
+    height: 114px;
+    margin-bottom: -3rem;
+  }
+
+  .two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 3rem;
+    grid-template-areas: "content illustration";
+    text-align: left;
+
+    &__illustration {
+      grid-area: illustration;
+    }
+
+    &__content {
+      grid-area: content;
+
+      h2 {
+        font-size: 2.2rem;
+        text-align: left;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      span a {
+        font-size: 1rem;
+      }
+
+      .card {
+        width: 50%;
+      }
+    }
+  }
+
+  .cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 7rem;
+    grid-template-areas: "content form";
+    text-align: left;
+
+    &__content {
+      grid-area: content;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    form {
+      grid-area: form;
+    }
+
+    button {
+      width: 45%;
+    }
+  }
+}

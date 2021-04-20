@@ -1,0 +1,107 @@
+@use 'base';
+
+footer {
+  background: base.$primary-blue-700;
+  color: base.$white;
+
+  .footer {
+    &__content {
+      margin: 2.5rem;
+    }
+
+    &__social {
+      display: flex;
+      justify-content: center;
+
+      &__icon {
+        border: 1px solid base.$neutral-gray-blue;
+        border-radius: 100%;
+        color: base.$neutral-gray-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.45rem;
+        padding: 0.75rem;
+        height: 0.15rem;
+        width: 0.15rem;
+        &:hover {
+          border: 1px solid lighten(base.$accent-blue-400, 10%);
+          color: lighten(base.$accent-blue-400, 10%);
+        }
+
+        i {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  ul {
+    margin: 2rem 0;
+
+    #phone::before {
+      content: url("../images/icon-phone.svg");
+      margin: 0 1rem 0 0;
+    }
+
+    #email::before {
+      content: url("../images/icon-email.svg");
+      margin: 0 1rem 0 0;
+    }
+
+    a,
+    li {
+      color: base.$white;
+      padding: 0.5rem 0;
+      &:hover {
+        color: lighten(base.$accent-blue-400, 10%);
+      }
+    }
+  }
+
+  .attribution {
+    bottom: -25px;
+    position: relative;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: base.$accent-blue-400;
+  }
+}
+@media only screen and (min-width: 975px) {
+  .footer {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1.5fr 0.1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "logo-contact links-one links-two social"
+        "attribution attribution attribution attribution";
+        margin: 4.06rem !important;
+    }
+
+    &__logo__contact { grid-area: logo-contact; }
+
+    &__social {
+      grid-area: social;
+      margin: 5.5rem 0;
+    }
+
+    &__links__one {
+      grid-area: links-one;
+      justify-self: center;
+      margin: 5.5rem 0;
+    }
+
+    &__links__two {
+      grid-area: links-two;
+      justify-self: center;
+      margin: 5.5rem 0;
+    }
+
+    &__attribution { grid-area: attribution; }
+  }
+}
