@@ -19,7 +19,7 @@ Users should be able to:
 ### Links
 
 
-- [Live Site](https://frontend-mentor-challenges-ten-psi.vercel.app/Fylo-Landing-Page-With-Two-Column_Layout/index.html)
+- [Live Site](https://frontend-mentor-challenges-ten-psi.vercel.app/Fylo-Landing-Page-With-Two-Columns/index.html)
 
 
 ### Built with
